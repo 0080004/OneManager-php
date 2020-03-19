@@ -1340,7 +1340,7 @@ function EnvOpt($needUpdate = 0)
     } else {
         $preurl = path_format($_SERVER['PHP_SELF'] . '/');
     }
-    $html .= '<pre>'.json_encode($_SERVER, JSON_PRETTY_PRINT).'</pre>
+    $html .= '<pre>'.json_encode($GLOBALS, JSON_PRETTY_PRINT).'</pre>
 <a href="'.$preurl.'">'.getconstStr('Back').'</a>&nbsp;&nbsp;&nbsp;<a href="'.$_SERVER['base_path'].'">'.getconstStr('Back').getconstStr('Home').'</a><br>
 <a href="https://github.com/qkqpttgf/OneManager-php">Github</a><br>';
     if (!((isset($_SERVER['USER'])&&$_SERVER['USER']==='qcloud')||(isset($_SERVER['HEROKU_APP_DIR'])&&$_SERVER['HEROKU_APP_DIR']==='/app'))) {
